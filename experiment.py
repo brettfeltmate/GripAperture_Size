@@ -188,14 +188,14 @@ class GripAperture_Size(klibs.Experiment):
         self.target_boundary = AnnulusBoundary(
             label=TARGET,
             center=self.locs[self.target_loc],  # type: ignore[known-attribute]
-            radius=self.sizes[TARGET][self.target_size] + self.sizes[BRIM],  # type: ignore[known-attribute]
+            radius=self.sizes[self.target_size] + self.sizes[BRIM],  # type: ignore[known-attribute]
             thickness=self.sizes[BRIM],
         )
 
         self.distractor_boundary = AnnulusBoundary(
             label=DISTRACTOR,
             center=self.locs[self.distractor_loc],  # type: ignore[known-attribute]
-            radius=self.sizes[TARGET][self.distractor_size] + self.sizes[BRIM],  # type: ignore[known-attribute]
+            radius=self.sizes[self.distractor_size] + self.sizes[BRIM],  # type: ignore[known-attribute]
             thickness=self.sizes[BRIM],
         )
 
